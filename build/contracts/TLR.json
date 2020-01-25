@@ -301,7 +301,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 192,
+                        "referencedDeclaration": 402,
                         "src": "134:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -888,7 +888,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 192,
+                            "referencedDeclaration": 402,
                             "src": "941:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1088,7 +1088,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 192,
+                          "referencedDeclaration": 402,
                           "src": "1036:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1856,7 +1856,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 192,
+                        "referencedDeclaration": 402,
                         "src": "134:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2443,7 +2443,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 192,
+                            "referencedDeclaration": 402,
                             "src": "941:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2643,7 +2643,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 192,
+                          "referencedDeclaration": 402,
                           "src": "1036:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3317,9 +3317,82 @@
     "name": "solc",
     "version": "0.5.12+commit.7709ece9.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {
+        "0xa7b871d8c25f79541cc6e2697e3327e01f1fb04b48fa6af0ec1bfef42c5a94dd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "reportId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "latitude",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "longitude",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "message",
+              "type": "string"
+            }
+          ],
+          "name": "markedHelpful",
+          "type": "event",
+          "signature": "0xa7b871d8c25f79541cc6e2697e3327e01f1fb04b48fa6af0ec1bfef42c5a94dd"
+        },
+        "0x130c24c5165048fa1c9965df33a72e18e5d97a8b0586cbf5d88ef6726a4033b8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "reporter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "latitude",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "longitude",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "message",
+              "type": "string"
+            }
+          ],
+          "name": "newReport",
+          "type": "event",
+          "signature": "0x130c24c5165048fa1c9965df33a72e18e5d97a8b0586cbf5d88ef6726a4033b8"
+        }
+      },
+      "links": {},
+      "address": "0x20E0e0AE2A3CFAc41c20012f7A5204cEf59C0B9F",
+      "transactionHash": "0x15fb7195190da3a0e982ce3e35c6216c1e09f66384c1e0a4d8e769297c268f7c"
+    }
+  },
   "schemaVersion": "3.0.19",
-  "updatedAt": "2020-01-24T09:37:59.406Z",
+  "updatedAt": "2020-01-25T10:57:56.293Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
