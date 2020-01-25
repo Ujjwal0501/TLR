@@ -1,12 +1,17 @@
 pragma solidity ^0.5.0;
+import './TLRToken.sol';
 
-contract TLR {
+contract TLR is TLRToken {
     
     address public deployer;
     
-    constructor() public {
-        
-        deployer = msg.sender;
+    uint public rewardValue;
+
+    constructor(uint _initialSupply) public {
+    totalSupply = _initialSupply*10**uint256(decimals);
+    balanceOf[msg.sender] = _initialSupply;
+    deployer = msg.sender;
+    rewardValue=2;
         
     }
     
@@ -29,7 +34,6 @@ contract TLR {
 
 
 
- 
     //event that will emit data on adding new report
     event newReport(address indexed reporter,uint latitude,uint longitude,string message);
     
@@ -45,18 +49,14 @@ contract TLR {
         
         
     }
-    
-    
-  
-    
-    
+
     //marks the report as helpful
     
     
     function markHelpful(uint _reportId) public {
         
         Reports[_reportId].helped=true;
-        
+        giveIncentive(Reports[_reportId].Reporter);
         emit markedHelpful(_reportId,Reports[_reportId].latitude,Reports[_reportId].longitude,Reports[_reportId].message);
 
 
@@ -69,9 +69,8 @@ contract TLR {
     
     function giveIncentive(address _hero) public {
         
-        //create ERC20 and use it as incentive
-        
-    
+        transfer(_hero,rewardValue);
+
     }
 
     

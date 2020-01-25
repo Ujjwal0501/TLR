@@ -15,11 +15,11 @@ contract TLRToken {
     event Burn(address indexed _from,uint _value);
     
     
-    constructor(uint initialSupply) public {
-        totalSupply = initialSupply*10**uint256(decimals);
+    constructor() public {
+  
         name="TLRToken";
         symbol="TLR";
-        balanceOf[msg.sender] = initialSupply;
+  
     }
     
     function _transfer(address _from,address _to,uint _value) internal {
