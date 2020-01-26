@@ -16,6 +16,7 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "@maticnetwork/eth-dagger": "0.0.1"
+    "@maticnetwork/eth-dagger": "0.0.1",
+    "@truffle/hdwallet-provider": "^1.0.29"
   }
 }
