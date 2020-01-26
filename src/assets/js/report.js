@@ -561,5 +561,13 @@ App = {
 $(function() {
     $(window).on("load", () => {    // strictly use this method for detection
         App.web3init();
+
+        // initialise disabled fields
+        navigator.geolocation.getCurrentPosition((pos) => {
+            $("#longinput").val(pos.coords.longitude);
+            $("#latinput").val(lat = pos.coords.latitude);
+        });
+
+        $("#timeinput").val((new Date()).getTime());
     });
 });
