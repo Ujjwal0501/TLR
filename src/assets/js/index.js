@@ -512,14 +512,14 @@ App = {
                       // this is a best way to go
                       // we are sure the address is successfully initialised
                       App.contract.methods.balanceOf(App.defaultAddress).call({
-                              from: App.defaultAddress
                           },
                           (err, res) => {
                               if (err) {
                                   console.log(err.toString());
                               } else {
                                   // initialise dagger listener on successful txRequest
-                                  console.log(res);
+                                  console.log(res+'******');
+                                      $('#TLR').innerText = res
                               }
                           });
                   } else {

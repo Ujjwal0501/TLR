@@ -133,7 +133,7 @@ contract TLR is TLRToken {
     
     //incentivizing the users if the report has helped to solve the crime
     function giveIncentive(address _hero) public {
-        
+    
         transfer(_hero,rewardValue);
 
     }
