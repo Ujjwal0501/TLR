@@ -534,19 +534,34 @@ App = {
                     // strictly call the contract method here
                     // this is a best way to go
                     // we are sure the address is successfully initialised
-                    App.contract.methods.Reports(11).call({from: App.defaultAddress},
-                        (err, res) => {
-                            if (err) {
-                                console.log(err.toString());
-                            } else {
-                                // initialise dagger listener on successful txRequest
-                                console.log(res);
+                    web3.eth.getPastLogs({address: App.contract_addr,
+                        fromBlock: "0",
+                        toBlock: "latest",
+                        topics:[]}).then((res) => {
+                        console.log(res);
 
-                                for (var tx in res) {
-                                    pinReports(tx["latitude"], tx["longitude"], tx["message"], tx["helped"]);
-                                }
-                            }
-                        });
+                        for (var i = 0; i < res.length; i++) {
+
+                            var data = res[i]["data"];
+                            console.log(res[i]);
+                            var jsonData = web3.eth.abi.decodeParameters(['uint', 'uint', 'string'], data);
+                            console.log(jsonData);
+                            pinReports(jsonData["0"], jsonData["1"], jsonData["2"]);
+                        }
+                    });
+                    // App.contract.methods.Reports(11).call({from: App.defaultAddress},
+                    //     (err, res) => {
+                    //         if (err) {
+                    //             console.log(err.toString());
+                    //         } else {
+                    //             // initialise dagger listener on successful txRequest
+                    //             console.log(res);
+                    //
+                    //             for (var tx in res) {
+                    //                 pinReports(tx["latitude"], tx["longitude"], tx["message"], tx["helped"]);
+                    //             }
+                    //         }
+                    //     });
                 } else {
                     // log the error
                     console.log(err);
