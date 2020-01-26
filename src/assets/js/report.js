@@ -504,7 +504,7 @@ App = {
                     // we are sure the address is successfully initialised
                     
 
-                    App.contract.methods.addReport(11,11, "hello").send({
+                    App.contract.methods.addReport(parseInt($("#latinput").val()), parseInt($("#longinput").val()), $("#descinput").val()).send({
                                 from: App.defaultAddress,
                                 gas: 1500000
                             },
@@ -512,7 +512,6 @@ App = {
                             if (err) {
                                 console.log(err.toString());
                             } else {
-                                //  initialise dagger listener on successful txRequest
                                 console.log(res);
                             }
                         });
