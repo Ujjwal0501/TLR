@@ -542,7 +542,7 @@ App = {
                                 // initialise dagger listener on successful txRequest
                                 console.log(res);
 
-                                for (tx in res) {
+                                for (var tx in res) {
                                     pinReports(tx["latitude"], tx["longitude"], tx["message"], tx["helped"]);
                                 }
                             }
@@ -574,7 +574,14 @@ App = {
                         // Process transaction object
                         // pin on maps windows
                         console.log(transaction);
-                        pinReports(tx["latitude"], tx["longitude"], tx["message"], tx["helped"]);
+                        web3.eth.getBlock(transaction["blockNumber"], true, (err, res) => {
+                            if (err) {
+                                console.log(res);
+                                pinReports(transaction["latitude"], transaction["longitude"], transaction["message"], transaction["helped"]);
+                            } else {
+                                console.log(err);
+                            }
+                        });
                     });
                 } else {
                     // log the error
