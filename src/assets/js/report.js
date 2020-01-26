@@ -480,6 +480,8 @@ App = {
     contract: null,
     web3Provider: null,
     defaultAddress: null,
+ 
+
     report: function(e) {
         e.preventDefault(); // stop normal action for button
         $('#report').attr('disabled', 'disabled');
@@ -500,12 +502,17 @@ App = {
                     // strictly call the contract method here
                     // this is a best way to go
                     // we are sure the address is successfully initialised
-                    App.contract.methods.addReport(11,11,"hello").send({from: App.defaultAddress},
+                    
+
+                    App.contract.methods.addReport(11,11, "hello").send({
+                                from: App.defaultAddress,
+                                gas: 1500000
+                            },
                         (err, res) => {
                             if (err) {
                                 console.log(err.toString());
                             } else {
-                                // initialise dagger listener on successful txRequest
+                                //  initialise dagger listener on successful txRequest
                                 console.log(res);
                             }
                         });
