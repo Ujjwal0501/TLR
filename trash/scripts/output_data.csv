@@ -1,0 +1,50 @@
+,category,message,column
+0,Assault,He’s hitting her,he hit
+1,Assault,She’s hitting him,she hit
+2,Assault,A person just got punched,a person got punch
+3,Assault,A guy was kicking another person who was on the ground,a guy kick anoth person ground
+4,Assault,He hits me,he hit
+5,Assault,She hits me,she hit
+6,Assault,He pinned her down,he pin
+7,Assault,She pinned him down,she pin
+8,Auto Theft,A red car was stolen,a red car stolen
+9,Auto Theft,A green car was stolen,a green car stolen
+10,Auto Theft,That car was hijacked,that car hijack
+11,Auto Theft,An alarm in a car is going off,an alarm car go
+12,Auto Theft,My car is gone,my car gone
+13,Auto Theft,somebody stole my car,somebodi stole car
+14,Auto Theft,Somebody took my car,somebodi took car
+15,Auto Theft,car,car
+16,Auto Theft,van,van
+17,Auto Theft,suv,suv
+18,Auto Theft,tesla,tesla
+19,Auto Theft,toyota,toyota
+20,Break & Enter,Somebody broke into my house,somebodi broke hous
+21,Break & Enter,Somebody stole something in my apartment,somebodi stole someth apart
+22,Break & Enter,Somebody stole something in my house,somebodi stole someth hous
+23,Break & Enter,Somebody stole something in my condo,somebodi stole someth condo
+24,Break & Enter,Somebody broke into my apartment unit,somebodi broke apart unit
+25,Break & Enter,Somebody broke into my condo,somebodi broke condo
+26,Break & Enter,I think he’s breaking into that house,i think break hous
+27,Break & Enter,I think she’s breaking into that condo,i think break condo
+28,Break & Enter,I think he’s breaking into that apartment,i think break apart
+29,Break & Enter,house,hous
+30,Break & Enter,apartment,apart
+31,Break & Enter,condo,condo
+32,Bike Theft,He stole my bike,he stole bike
+33,Bike Theft,She stole my bike,she stole bike
+34,Bike Theft,My bike is gone,my bike gone
+35,Bike Theft,"Someone took my bike""",someon took bike
+36,Bike Theft,bike,bike
+37,Sexual Assault,He raped her,he rape
+38,Sexual Assault,She raped him,she rape
+39,Sexual Assault,He's touching her inappropriately,he touch inappropri
+40,Sexual Assault,She's touching her inappropriately,she touch inappropri
+41,Theft,He stole my purse,he stole purs
+42,Theft,She stole my money,she stole money
+43,Theft,Someone took my phone,someon took phone
+44,Theft,Someone ran off after taking something from a person,someon ran take someth person
+45,Theft,He stole my belongings,he stole belong
+46,Theft,Somebody robbed me,somebodi rob
+47,Theft,laptop was stolen,laptop stolen
+48,Theft,computer was stolen,comput stolen
