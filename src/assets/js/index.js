@@ -1,7 +1,9 @@
 App = {
-    contract_abi: [{
+    contract_abi: [
+        {
             "constant": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "internalType": "uint256",
                     "name": "_latitude",
                     "type": "uint256"
@@ -24,18 +26,21 @@ App = {
             "type": "function"
         },
         {
-            "inputs": [{
-                "internalType": "uint256",
-                "name": "_initialSupply",
-                "type": "uint256"
-            }],
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_initialSupply",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "constructor"
         },
         {
             "anonymous": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "indexed": true,
                     "internalType": "address",
                     "name": "_tokenOwner",
@@ -59,7 +64,8 @@ App = {
         },
         {
             "constant": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "internalType": "address",
                     "name": "_spender",
                     "type": "address"
@@ -71,18 +77,21 @@ App = {
                 }
             ],
             "name": "approve",
-            "outputs": [{
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }],
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function"
         },
         {
             "anonymous": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "indexed": true,
                     "internalType": "address",
                     "name": "_from",
@@ -100,11 +109,13 @@ App = {
         },
         {
             "constant": false,
-            "inputs": [{
-                "internalType": "address",
-                "name": "_hero",
-                "type": "address"
-            }],
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_hero",
+                    "type": "address"
+                }
+            ],
             "name": "giveIncentive",
             "outputs": [],
             "payable": false,
@@ -113,7 +124,8 @@ App = {
         },
         {
             "anonymous": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "indexed": true,
                     "internalType": "address",
                     "name": "_from",
@@ -137,7 +149,8 @@ App = {
         },
         {
             "anonymous": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "indexed": true,
                     "internalType": "uint256",
                     "name": "reportId",
@@ -167,11 +180,13 @@ App = {
         },
         {
             "constant": false,
-            "inputs": [{
-                "internalType": "uint256",
-                "name": "_reportId",
-                "type": "uint256"
-            }],
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_reportId",
+                    "type": "uint256"
+                }
+            ],
             "name": "markHelpful",
             "outputs": [],
             "payable": false,
@@ -180,7 +195,8 @@ App = {
         },
         {
             "anonymous": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "indexed": true,
                     "internalType": "address",
                     "name": "reporter",
@@ -210,7 +226,8 @@ App = {
         },
         {
             "constant": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "internalType": "address",
                     "name": "_to",
                     "type": "address"
@@ -222,18 +239,21 @@ App = {
                 }
             ],
             "name": "transfer",
-            "outputs": [{
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }],
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function"
         },
         {
             "constant": false,
-            "inputs": [{
+            "inputs": [
+                {
                     "internalType": "address",
                     "name": "_from",
                     "type": "address"
@@ -250,18 +270,36 @@ App = {
                 }
             ],
             "name": "transferFrom",
-            "outputs": [{
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }],
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_reportId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "voteReport",
+            "outputs": [],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function"
         },
         {
             "constant": true,
-            "inputs": [{
+            "inputs": [
+                {
                     "internalType": "address",
                     "name": "",
                     "type": "address"
@@ -273,28 +311,34 @@ App = {
                 }
             ],
             "name": "allowance",
-            "outputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
         },
         {
             "constant": true,
-            "inputs": [{
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }],
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
             "name": "balanceOf",
-            "outputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -303,11 +347,13 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "decimals",
-            "outputs": [{
-                "internalType": "uint8",
-                "name": "",
-                "type": "uint8"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint8",
+                    "name": "",
+                    "type": "uint8"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -316,11 +362,13 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "deployer",
-            "outputs": [{
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }],
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -329,11 +377,13 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "name",
-            "outputs": [{
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }],
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -342,24 +392,44 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "noOfReports",
-            "outputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
         },
         {
             "constant": true,
-            "inputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "inputs": [],
+            "name": "noOfUsers",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "name": "Reports",
-            "outputs": [{
+            "outputs": [
+                {
                     "internalType": "address payable",
                     "name": "Reporter",
                     "type": "address"
@@ -380,6 +450,11 @@ App = {
                     "type": "string"
                 },
                 {
+                    "internalType": "uint256",
+                    "name": "votes",
+                    "type": "uint256"
+                },
+                {
                     "internalType": "bool",
                     "name": "helped",
                     "type": "bool"
@@ -393,11 +468,13 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "rewardValue",
-            "outputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -406,11 +483,13 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "symbol",
-            "outputs": [{
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }],
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
@@ -419,17 +498,19 @@ App = {
             "constant": true,
             "inputs": [],
             "name": "totalSupply",
-            "outputs": [{
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
         }
     ],
-    contract_addr: "0xb8cc19322972c45174b4fbe68b051fa672aeb2f2",
+    contract_addr: "0x253aed1721ca3e1b8bc710e4785d071ecfad9911",
     contract: null,
     web3Provider: null,
     defaultAddress: null,

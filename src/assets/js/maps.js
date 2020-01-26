@@ -283,6 +283,21 @@ App = {
             "type": "function"
         },
         {
+            "constant": false,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_reportId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "voteReport",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
             "constant": true,
             "inputs": [
                 {
@@ -391,6 +406,21 @@ App = {
         },
         {
             "constant": true,
+            "inputs": [],
+            "name": "noOfUsers",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
             "inputs": [
                 {
                     "internalType": "uint256",
@@ -419,6 +449,11 @@ App = {
                     "internalType": "string",
                     "name": "message",
                     "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "votes",
+                    "type": "uint256"
                 },
                 {
                     "internalType": "bool",
@@ -476,7 +511,7 @@ App = {
             "type": "function"
         }
     ],
-    contract_addr: "0xb8cc19322972c45174b4fbe68b051fa672aeb2f2",
+    contract_addr: "0x253aed1721ca3e1b8bc710e4785d071ecfad9911",
     contract: null,
     web3Provider: null,
     defaultAddress: null,
