@@ -10,7 +10,7 @@ data = pd.read_csv('data.csv')
 # data = data['category']
 
 
-print(type(data))
+# print(type(data))
 
 
 
@@ -32,7 +32,7 @@ stoppingwords = stopwords.words("english")
 
 data['column'] = data['message'].apply(lambda x: " ".join([removal.stem(i) for i in re.sub("[^a-zA-Z]", " ", x).split() if i not in stoppingwords]).lower())
 
-print(data['column'])
+# print(data['column'])
 
 X_train, X_test, y_train, y_test = train_test_split(data['column'], data.category, test_size=0.2)
 
@@ -42,7 +42,7 @@ pipeline = Pipeline([('vect', TfidfVectorizer(ngram_range=(1, 2), stop_words="en
                      ('chi',  SelectKBest(chi2, k=15)),
                      ('clf', LinearSVC(C=1.0, penalty='l1', max_iter=25000, dual=False))])
 
-print(X_train)
+# print(X_train)
 
 model = pipeline.fit(X_train, y_train)
 
@@ -55,12 +55,12 @@ feature_names = [feature_names[i] for i in chi.get_support(indices=True)]
 feature_names = np.asarray(feature_names)
 
 target_names = ['Assault', 'Auto Theft', 'Break/Enter', 'Bike Theft', 'Sexual Assault', 'Theft', 'Violence']
-print("top 10 keystoppingwords per class:")
+# print("top 10 keystoppingwords per class:")
 for i, label in enumerate(target_names):
     top10 = np.argsort(clf.coef_[i])[-10:]
-    print("%s: %s" % (label, " ".join(feature_names[top10])))
+#     print("%s: %s" % (label, " ".join(feature_names[top10])))
 
-print("accuracy score: " + str(model.score(X_test, y_test)))
+# print("accuracy score: " + str(model.score(X_test, y_test)))
 
 
 
