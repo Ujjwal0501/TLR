@@ -574,14 +574,10 @@ App = {
                         // Process transaction object
                         // pin on maps windows
                         console.log(transaction);
-                        web3.eth.getBlock(transaction["blockNumber"], true, (err, res) => {
-                            if (err) {
-                                console.log(res);
-                                pinReports(transaction["latitude"], transaction["longitude"], transaction["message"], transaction["helped"]);
-                            } else {
-                                console.log(err);
-                            }
-                        });
+                        var data = transaction["receipt"]["logs"]["0"]["data"];
+                        var jsonData = web3.eth.abi.decodeParameters(['uint', 'uint', 'string'], data);
+                        pinReports(jsonData["0"], jsonData["1"], jsonData["2"]);
+
                     });
                 } else {
                     // log the error
@@ -643,13 +639,14 @@ $(function() {
 
 
 function pinReports(lat, long, msg, type) {
-
+    lat = parseFloat(lat)/10000000;
+    long = parseFloat(long)/10000000;
     if (type) ic = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
     else ic = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
     var marker = new google.maps.Marker({
         icon: ic,
         position: new google.maps.LatLng(lat, long),
-        title:"msg"
+        title: msg
     });
 
     marker.setMap(map);

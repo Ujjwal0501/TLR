@@ -539,7 +539,7 @@ App = {
                     // we are sure the address is successfully initialised
                     
 
-                    App.contract.methods.addReport(parseInt($("#latinput").val()), parseInt($("#longinput").val()), $("#descinput").val()).send({
+                    App.contract.methods.addReport(parseFloat($("#latinput").val())*10000000, parseFloat($("#longinput").val())*10000000, $("#descinput").val()).send({
                                 from: App.defaultAddress,
                                 gas: 1500000
                             },
