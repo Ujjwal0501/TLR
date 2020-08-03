@@ -1,0 +1,3 @@
+[submodule "hackverse"]
+	path = hackverse
+	url = https://github.com/johnsoncarl/hackverse.git
